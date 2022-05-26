@@ -2,7 +2,6 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit as st
-from multiapp import MultiApp
 import page0, page1, page2, page3, page4, Data_cleaning
 import re
 
