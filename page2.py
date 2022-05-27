@@ -11,9 +11,9 @@ def Visual(df) :
 
 	plot_type = "scatter"
 	options = df.columns.tolist()
-	options.insert(0, None)
+	options.insert(0, None)#insert None as an option which would be the default for color
 	with col1 :
-		plot_type = st.selectbox("Select typr of plot", ("Scatter", "Bar"))
+		plot_type = st.selectbox("Select type of plot", ("Scatter", "Bar"))
 
 	with col2 : 
 		x = st.selectbox("Variable 1 (x - axis)", df.columns)
