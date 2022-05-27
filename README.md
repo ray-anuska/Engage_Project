@@ -39,3 +39,15 @@ The four sections are as follows :
     This section divides the vehicles into different segments based on their details. The vehicles are clustered together into five different categories using K-Means clustering. Most vehicle markets can be optimally divided into five segments. The user can choose to search for the segment that an existing vehicle in the databse belongs to or enter new specifications and check the segments. Visualization is also available which allows user to plot relation between different variables with the color gradient representing the different segments. This makes it easy to see which car belongs to which segment and what the properties of that segment are. Fo example, a car manufactured by Tata may belong to segment 1(as seen from the search function) which is the second most expensive segment (as seen from the plot). 
     
 These features can allow the automotive companies to be aware of the various market segments and the cars they will be competing, the most popular specifications and other such queries which would help in making informed choices. 
+
+## Techstack 
+* Python
+* Streamlit
+
+## Cloud Service 
+* Heroku 
+
+## Instructions to run on local machine 
+
+* Ensure all the requirements mentioned in the requirements.txt file is met
+* Go to the directory where the files are stored and use the following command in the command prompt : streamlit run app.py
