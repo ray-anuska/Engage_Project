@@ -15,11 +15,10 @@ def dashboard(sorted_df, rank) :
 
 	rank = rank - 1
 
-	col1, col2, col3,col4 = st.columns(4)
+	col1, col2, col3,col4 = st.columns(4) #display the results in four different columns
 
 	with col1 : 
 		for i in range(0, cols, 4) : 
-			#st.write("	", sorted_df.columns[i], ' : ', sorted_df.iloc[0, i])
 			if sorted_df.iloc[rank, i] == sorted_df.iloc[rank, i] : 
 				st.metric(label = sorted_df.columns[i], value = sorted_df.iloc[rank, i])
 	with col2 : 
@@ -39,7 +38,7 @@ def dashboard(sorted_df, rank) :
 def popular(df, name) : 
 	sorted_df = df.sort_values(by = name, ascending = False)
 	sorted_df = sorted_df.head(3)
-
+	#displaying the top 3 results
 	dashboard(sorted_df, 1)
 	dashboard(sorted_df, 2)
 	dashboard(sorted_df, 3)
@@ -50,7 +49,7 @@ def market_segment(df) :
 		num_cols = [ i for i in df.columns if df[i].dtype != 'object']
 
 		for i in num_cols : 
-			df = df[~df[i].isnull()]
+			df = df[~df[i].isnull()]#dropping rows with missing values
 		km = KMeans(n_clusters=5, n_init=20, max_iter=400, random_state=0)
 		segment = km.fit_predict(df[num_cols])
 		df['segment'] = segment
@@ -66,7 +65,7 @@ def market_segment(df) :
 			c = st.selectbox('Select', ("Existing vehicle", "New Specifications"))
 			if c == "Existing vehicle" : 
 				menu = df.select_dtypes(include = object).columns
-				menu = menu.insert(0, "None")
+				menu = menu.insert(0, "None") #inserting a None option for default case
 				s = st.selectbox("Search by ", menu)
 				if s != "None" : 
 					query = st.selectbox("Select", df[s].unique())
@@ -90,7 +89,7 @@ def market_segment(df) :
 				if new_df.isnull().values.any() == False: 
 					st.dataframe(new_df)	
 					frames = [df[num_cols], new_df]	
-					new_df = pd.concat(frames)
+					new_df = pd.concat(frames) #adding the new data to existing dataset
 					new_segment = km.fit_predict(new_df)
 					st.write("Vehicle with entered specifications is part of segment no. " + str(new_segment[len(new_df) - 1]))
 					st.write("Other vehicles in this segment : ")
