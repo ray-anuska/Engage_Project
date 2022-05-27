@@ -24,6 +24,6 @@ def custom_filter(df) :
 
 		filtered_mask = mask[0]
 		for i in mask : 
-			filtered_mask = filtered_mask & i
+			filtered_mask = filtered_mask & i #adding the conditions from each slider
 		
 	st.dataframe(df.loc[filtered_mask])
