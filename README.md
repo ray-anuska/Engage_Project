@@ -41,13 +41,21 @@ The four sections are as follows :
 These features can allow the automotive companies to be aware of the various market segments and the cars they will be competing, the most popular specifications and other such queries which would help in making informed choices. 
 
 ## Techstack 
-* Python
-* Streamlit
+* Python - version 3.9.5 
+* Streamlit - version 1.9.0
+
+Other library packages and dependencies are mentioned in the requirements.txt file
 
 ## Cloud Service 
 * Heroku 
 
 ## Instructions to run on local machine 
 
-* Ensure all the requirements mentioned in the requirements.txt file is met
+* Ensure all the requirements mentioned in the requirements.txt file is met and the files are downloaded on your local machine.
 * Go to the directory where the files are stored and use the following command in the command prompt : streamlit run app.py
+
+## Note : 
+* The sample datasets have been taken from Kaggle
+* In case the website is not available, follow the instructions to run on local machine.
+* The website expects input similar to the sample files provided, that is, it should have information about cars and have details like Price and Sales. Otherwise, some features won't work and an error message will be displayed. The program looks for columns named "Price" and "Sales" for some analysis. There are some alternatives that will work like "Price_in_thousands" or "Sales_in_thousands" but the column containing car prices cannot be named something like "Showroom". It will show an error similar to "Price not found". Change the name of the column and upload again in that case. 
+* While entering data for new car specifications in the competing segment section, ensure that the data entered is of the same format as the examples mentioned there.
