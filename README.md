@@ -41,7 +41,7 @@ The four sections are as follows :
 These features can allow the automotive companies to be aware of the various market segments and the cars they will be competing, the most popular specifications and other such queries which would help in making informed choices. 
 
 ## Techstack 
-* Python - version 3.9.5 
+* Python - version 3.9.5 or greater (The deployed version is 3.10.4)
 * Streamlit - version 1.9.0
 
 Other library packages and dependencies are mentioned in the requirements.txt file
