@@ -8,6 +8,7 @@ def details(x, title) :
 	distinct = x.unique()
 	st.metric(label = "Distinct Values : " , value = len(distinct))
 	numerics = ['int16', 'int32', 'int64', 'float16', 'float32', 'float64']
+	#if its a numeric column then display stats else frequency of values(string) 
 	if(x.dtype in numerics) : 
 		stat = x.describe()
 		st.dataframe(stat)
@@ -29,7 +30,7 @@ def Report(df) :
 	percentage_duplicate = round(n_dup / (ncols * nrows) * 100)
 	df = df[~df.duplicated()] #dropping duplicate rows
 
-	col1, col2, col3 = st.columns(3)
+	col1, col2, col3 = st.columns(3)#for display layout
 	with col1 : 
 		st.metric(label = "Numeber of variables", value = ncols)
 		st.metric(label = "Number of rows of data" , value = nrows)
@@ -52,7 +53,7 @@ def Report(df) :
 		details(df[var], var)
 
 
-	with col2 :  
+	with col2 :  #ensures plot is displayed on the right
 		fig, ax = plt.subplots()
 		fig = px.bar(df, x = var)
 		st.plotly_chart(fig)
