@@ -59,6 +59,8 @@ Other library packages and dependencies are mentioned in the requirements.txt fi
 * Ensure all the requirements mentioned in the requirements.txt file is met and the files are downloaded on your local machine.
 * Go to the directory where the files are stored and use the following command in the command prompt : streamlit run app.py
 
+![](terminal.png)
+
 ## Note : 
 * The sample datasets have been taken from Kaggle
 * In case the website is not available, follow the instructions to run on local machine.
