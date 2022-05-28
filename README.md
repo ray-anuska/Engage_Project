@@ -6,6 +6,8 @@ Demo Video : https://youtu.be/RwXDOjSxBUU
 
 Two sample datasets are present in this repository which can be used to test the site. (car_sales.csv and cars_engage_2022.csv)
 
+(Note : The cars_engage_2022.csv dataset does not contain Sales data hence one of the features will not work. )
+
 ## Problem Statement
 
 To Develop an application to demonstrate how the Automotive Industry could harness data to take informed decisions.
