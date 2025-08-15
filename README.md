@@ -1,6 +1,6 @@
 # Data Analysis for Automotive Industry
 
-This is a Web - based Application build as a project for Microsoft Engage 2022 Mentorship Program. It can be acessed here: https://automotivedataanalysis.herokuapp.com/. 
+This is a Web - based Application build as a project for Microsoft Engage 2022 Mentorship Program. It can be acessed here: [Automotive Data Analysis](https://cardataanalysis-engageproject.streamlit.app/). 
 
 Demo Video : https://youtu.be/RwXDOjSxBUU 
 
@@ -45,14 +45,14 @@ The four sections are as follows :
     
 These features can allow the automotive companies to be aware of the various market segments and the cars they will be competing, the most popular specifications and other such queries which would help in making informed choices. 
 
-## Techstack 
+## Techstack (At the time of creation)
 * Python - version 3.9.5 or greater (The deployed version is 3.10.4)
 * Streamlit - version 1.9.0
 
-Other library packages and dependencies are mentioned in the requirements.txt file
+Other library packages and dependencies are mentioned in the requirements.txt file. Now, it uses more recent versions. 
 
 ## Cloud Service 
-* Heroku 
+* Streamlit
 
 ## Instructions to run on local machine 
 
